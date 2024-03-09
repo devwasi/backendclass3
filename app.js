@@ -10,7 +10,7 @@ app.listen(PORT,()=>{
 
 // get all product data 
 // it will automatically detect wheter a single product or all products
-app.get("/allproduct",(req, res)=>{
+app.get("/",(req, res)=>{
     console.log("query params", req.query.id)
     if(req.query.id){
         const filterData = products.filter((product)=>{
@@ -36,9 +36,9 @@ res.send(products)
 
 
 // get data 
-app.get("/",(req, res)=>{
-res.send("user get")
-})
+// app.get("/",(req, res)=>{
+// res.send("user get")
+// })
 
 // post or create 
 
